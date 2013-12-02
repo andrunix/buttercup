@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div
+    br
+    a(href="/auth/twitter") Login with Twitter
+    br
+    a(href="/auth/facebook") Login with Facebook
+  div
+    h3 Login with email
+    form(name="login", action="/login", method="post")
+      label Email: 
+      input(type="text", name="username")
+      br
+      label Password: 
+      input(type="password", name="password")
+      br
+      input(type="submit", value="Login")
+
+
+      
